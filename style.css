@@ -7,8 +7,6 @@
   --blue: #1664d9;
   --cyan: #00c2ff;
   --violet: #7c3aed;
-  --mint: #14f1b2;
-  --amber: #ffc857;
   --navy: #07152e;
   --radius: 8px;
   --shadow: 0 22px 70px rgba(15, 23, 42, 0.18);
@@ -48,81 +46,9 @@ svg {
   overflow: hidden;
   isolation: isolate;
   background:
-    linear-gradient(115deg, rgba(20, 241, 178, 0.14), transparent 24%),
-    linear-gradient(245deg, rgba(255, 200, 87, 0.14), transparent 22%),
     radial-gradient(circle at 12% 18%, rgba(0, 194, 255, 0.24), transparent 28%),
     radial-gradient(circle at 82% 12%, rgba(124, 58, 237, 0.18), transparent 30%),
     linear-gradient(135deg, #f8fbff 0%, #e8f2ff 42%, #f5f7fb 100%);
-}
-
-.presentation::before,
-.presentation::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.presentation::before {
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(22, 100, 217, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(0, 194, 255, 0.05) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
-  animation: gridDrift 16s linear infinite;
-}
-
-.presentation::after {
-  z-index: 1;
-  background:
-    linear-gradient(115deg, transparent 0 34%, rgba(0, 194, 255, 0.1) 34.3%, transparent 35%),
-    linear-gradient(115deg, transparent 0 63%, rgba(124, 58, 237, 0.08) 63.3%, transparent 64%);
-  opacity: 0.75;
-}
-
-.ambient-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.ambient-layer span {
-  position: absolute;
-  width: min(36vw, 420px);
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgba(0, 194, 255, 0.86), rgba(124, 58, 237, 0.78), transparent);
-  filter: drop-shadow(0 0 14px rgba(0, 194, 255, 0.55));
-  opacity: 0.6;
-  animation: dataStream 7s ease-in-out infinite;
-}
-
-.ambient-layer span:nth-child(1) {
-  top: 19%;
-  left: -16%;
-}
-
-.ambient-layer span:nth-child(2) {
-  top: 42%;
-  right: -22%;
-  animation-delay: -2.4s;
-}
-
-.ambient-layer span:nth-child(3) {
-  bottom: 26%;
-  left: 8%;
-  width: min(24vw, 300px);
-  animation-delay: -4.1s;
-}
-
-.ambient-layer span:nth-child(4) {
-  bottom: 14%;
-  right: 11%;
-  width: min(28vw, 340px);
-  animation-delay: -5.2s;
 }
 
 .topbar {
@@ -231,8 +157,7 @@ svg {
   display: block;
   width: 16.666%;
   height: 100%;
-  background: linear-gradient(90deg, var(--cyan), var(--mint), var(--violet));
-  box-shadow: 0 0 18px rgba(0, 194, 255, 0.62);
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
   transition: width 450ms ease;
 }
 
@@ -268,24 +193,6 @@ svg {
   z-index: -2;
 }
 
-.slide::after {
-  content: "";
-  position: absolute;
-  inset: 18% auto auto 6%;
-  width: min(34vw, 470px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 194, 255, 0.7), transparent);
-  transform: rotate(-18deg);
-  opacity: 0;
-  transition: opacity 420ms ease, transform 620ms ease;
-  z-index: -1;
-}
-
-.slide.active::after {
-  opacity: 0.75;
-  transform: rotate(-18deg) translateX(26px);
-}
-
 .slide-bg {
   position: absolute;
   inset: 0;
@@ -294,15 +201,13 @@ svg {
 
 .media-bg {
   background:
-    linear-gradient(90deg, rgba(7, 21, 46, 0.9), rgba(12, 32, 67, 0.58), rgba(17, 24, 39, 0.22)),
-    linear-gradient(135deg, rgba(0, 194, 255, 0.2), transparent 34%, rgba(124, 58, 237, 0.24)),
+    linear-gradient(90deg, rgba(7, 21, 46, 0.88), rgba(12, 32, 67, 0.62), rgba(17, 24, 39, 0.28)),
     var(--photo) center / cover;
 }
 
 .media-bg.soft {
   background:
     linear-gradient(90deg, rgba(7, 21, 46, 0.86), rgba(15, 23, 42, 0.76), rgba(22, 100, 217, 0.36)),
-    linear-gradient(135deg, rgba(20, 241, 178, 0.16), transparent 36%, rgba(124, 58, 237, 0.2)),
     var(--photo) center / cover;
 }
 
@@ -383,28 +288,6 @@ p {
   font-size: 1.45rem;
 }
 
-.hero-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.hero-pills span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 8px 13px;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  border-radius: var(--radius);
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(14px);
-  font-size: 0.92rem;
-  font-weight: 800;
-}
-
 .id-visual {
   position: relative;
   min-height: 360px;
@@ -416,7 +299,6 @@ p {
     linear-gradient(135deg, rgba(0, 194, 255, 0.3), rgba(124, 58, 237, 0.26));
   box-shadow: var(--shadow);
   overflow: hidden;
-  animation: cardFloat 5.5s ease-in-out infinite;
 }
 
 .id-visual::before {
@@ -430,18 +312,8 @@ p {
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85), transparent);
 }
 
-.id-visual::after {
-  content: "";
-  position: absolute;
-  inset: -40% -30%;
-  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.48), transparent 52%);
-  transform: translateX(-45%);
-  animation: scanSweep 4.8s ease-in-out infinite;
-}
-
 .id-chip {
   position: relative;
-  z-index: 1;
   width: 72px;
   height: 54px;
   margin-bottom: 34px;
@@ -461,7 +333,6 @@ p {
 
 .id-avatar {
   position: relative;
-  z-index: 1;
   width: 98px;
   height: 98px;
   display: grid;
@@ -482,7 +353,6 @@ p {
 
 .id-lines {
   position: relative;
-  z-index: 1;
   display: grid;
   gap: 16px;
   width: min(82%, 330px);
@@ -505,7 +375,6 @@ p {
 
 .secure-badge {
   position: absolute;
-  z-index: 2;
   right: 26px;
   bottom: 24px;
   display: inline-flex;
@@ -538,7 +407,7 @@ p {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.58);
+  box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
 
@@ -631,33 +500,12 @@ p {
   grid-column: span 2;
   min-height: 230px;
   padding: 24px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-}
-
-.service-card::after,
-.security-item::after {
-  content: "";
-  position: absolute;
-  inset: auto 18px 16px 18px;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--cyan), var(--mint), var(--violet));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 260ms ease;
+  transition: transform 220ms ease, border-color 220ms ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   border-color: rgba(0, 194, 255, 0.42);
-  box-shadow: 0 28px 72px rgba(15, 23, 42, 0.2), 0 0 0 1px rgba(0, 194, 255, 0.1);
-}
-
-.service-card:hover::after,
-.security-item:hover::after {
-  transform: scaleX(1);
 }
 
 .service-card.wide-card {
@@ -674,13 +522,6 @@ p {
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: transform 220ms ease, stroke 220ms ease;
-}
-
-.service-card:hover svg,
-.security-item:hover svg {
-  transform: translateY(-3px) scale(1.08);
-  stroke: var(--violet);
 }
 
 .service-card p,
@@ -727,7 +568,6 @@ p {
   background: rgba(7, 21, 46, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.32);
   font-weight: 800;
-  animation: tagPulse 2.8s ease-in-out infinite;
 }
 
 .timeline-list {
@@ -756,7 +596,6 @@ p {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), var(--violet));
   box-shadow: 0 0 0 5px rgba(0, 194, 255, 0.12);
-  animation: pointPulse 2.4s ease-in-out infinite;
 }
 
 .security-layout {
@@ -776,17 +615,8 @@ p {
 .security-item {
   min-height: 250px;
   padding: 24px;
-  position: relative;
-  overflow: hidden;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.88);
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-}
-
-.security-item:hover {
-  transform: translateY(-5px);
-  border-color: rgba(20, 241, 178, 0.42);
-  box-shadow: 0 28px 72px rgba(15, 23, 42, 0.2);
 }
 
 .security-item.warning {
@@ -817,7 +647,6 @@ p {
   margin: 0 auto 24px;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(0, 194, 255, 0.13), rgba(124, 58, 237, 0.12));
-  animation: conclusionPulse 3.4s ease-in-out infinite;
 }
 
 .conclusion-mark svg {
@@ -891,9 +720,7 @@ blockquote {
 .control-button.primary {
   color: #ffffff;
   border-color: transparent;
-  background: linear-gradient(135deg, var(--blue), var(--cyan), var(--violet));
-  background-size: 220% 220%;
-  animation: buttonFlow 5s ease infinite;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
 }
 
 .control-button:hover:not(:disabled) {
@@ -925,153 +752,18 @@ blockquote {
 
 .dots button.active {
   width: 34px;
-  background: linear-gradient(90deg, var(--cyan), var(--mint), var(--violet));
-  box-shadow: 0 0 16px rgba(0, 194, 255, 0.5);
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
 }
 
 .slide .slide-content {
   opacity: 0;
-  transform: translateY(30px) scale(0.975);
-  transition: opacity 520ms ease, transform 560ms cubic-bezier(0.22, 0.9, 0.27, 1);
+  transform: translateY(24px) scale(0.985);
+  transition: opacity 500ms ease, transform 500ms ease;
 }
 
 .slide.active .slide-content {
   opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-.slide.active .service-card,
-.slide.active .security-item,
-.slide.active .timeline-list li,
-.slide.active .hero-pills span {
-  animation: itemRise 520ms ease both;
-}
-
-.slide.active .service-card:nth-child(2),
-.slide.active .security-item:nth-child(2),
-.slide.active .timeline-list li:nth-child(2),
-.slide.active .hero-pills span:nth-child(2) {
-  animation-delay: 70ms;
-}
-
-.slide.active .service-card:nth-child(3),
-.slide.active .security-item:nth-child(3),
-.slide.active .timeline-list li:nth-child(3),
-.slide.active .hero-pills span:nth-child(3) {
-  animation-delay: 140ms;
-}
-
-.slide.active .service-card:nth-child(4),
-.slide.active .security-item:nth-child(4),
-.slide.active .timeline-list li:nth-child(4) {
-  animation-delay: 210ms;
-}
-
-.slide.active .service-card:nth-child(5),
-.slide.active .timeline-list li:nth-child(5) {
-  animation-delay: 280ms;
-}
-
-@keyframes gridDrift {
-  from {
-    background-position: 0 0, 0 0;
-  }
-
-  to {
-    background-position: 54px 54px, 54px 54px;
-  }
-}
-
-@keyframes dataStream {
-  0%,
-  100% {
-    transform: translateX(0) rotate(-12deg);
-    opacity: 0.25;
-  }
-
-  50% {
-    transform: translateX(36vw) rotate(-12deg);
-    opacity: 0.8;
-  }
-}
-
-@keyframes cardFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes scanSweep {
-  0%,
-  46% {
-    transform: translateX(-58%);
-  }
-
-  72%,
-  100% {
-    transform: translateX(58%);
-  }
-}
-
-@keyframes tagPulse {
-  0%,
-  100% {
-    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
-  }
-
-  50% {
-    box-shadow: 0 18px 42px rgba(0, 194, 255, 0.28);
-  }
-}
-
-@keyframes pointPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 5px rgba(0, 194, 255, 0.12);
-  }
-
-  50% {
-    box-shadow: 0 0 0 8px rgba(124, 58, 237, 0.12);
-  }
-}
-
-@keyframes conclusionPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes buttonFlow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes itemRise {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 980px) {
@@ -1125,10 +817,6 @@ blockquote {
     min-height: 100svh;
   }
 
-  .ambient-layer span {
-    width: 56vw;
-  }
-
   .topbar {
     top: 14px;
   }
@@ -1175,17 +863,6 @@ blockquote {
 
   .hero-copy p {
     font-size: 1.12rem;
-  }
-
-  .hero-pills {
-    gap: 8px;
-    margin-top: 18px;
-  }
-
-  .hero-pills span {
-    min-height: 34px;
-    padding: 7px 10px;
-    font-size: 0.82rem;
   }
 
   blockquote {
