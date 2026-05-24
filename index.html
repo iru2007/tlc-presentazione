@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta d'identita digitale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="presentation" aria-label="Presentazione: Carta d'identita digitale" tabindex="-1">
+    <div class="topbar">
+      <div class="brand-mark">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" role="img" aria-label="">
+            <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
+            <path d="M9 8h6M9 12h6M9 16h3"/>
+          </svg>
+        </span>
+        <span>Identita digitale</span>
+      </div>
+      <div class="topbar-actions">
+        <div class="slide-status">
+          <span id="slideCounter">01 / 06</span>
+        </div>
+        <button class="present-button" id="presentBtn" type="button" aria-label="Avvia presentazione a schermo intero">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h16v11H4z"/>
+            <path d="M8 21h8M12 16v5"/>
+            <path d="M9 9h6"/>
+          </svg>
+          <span id="presentBtnLabel">Presenta</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="progress" aria-hidden="true">
+      <span id="progressBar"></span>
+    </div>
+
+    <div class="slides-track" id="slidesTrack">
+      <section class="slide title-slide active" data-slide="1" aria-label="Slide 1: Titolo">
+        <div class="slide-bg media-bg" style="--photo:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80');"></div>
+        <div class="slide-content hero-layout">
+          <div class="hero-copy">
+            <span class="kicker">Cittadino digitale</span>
+            <h1>Carta d'identita digitale</h1>
+            <p>Identificarsi online in modo semplice e sicuro</p>
+          </div>
+          <div class="id-visual" aria-hidden="true">
+            <div class="id-chip"></div>
+            <div class="id-avatar">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 34c8 0 14-6 14-14S40 6 32 6 18 12 18 20s6 14 14 14Z"/>
+                <path d="M10 58c3-12 12-18 22-18s19 6 22 18"/>
+              </svg>
+            </div>
+            <div class="id-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="secure-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"/>
+                <path d="m9 12 2 2 4-5"/>
+              </svg>
+              <span>Sicura</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="2" aria-label="Slide 2: Che cos'e">
+        <div class="slide-content two-column">
+          <div class="text-panel">
+            <span class="kicker">Che cos'e</span>
+            <h2>Un documento per essere riconosciuti online</h2>
+            <p>
+              La carta d'identita digitale permette a una persona di dimostrare la propria identita
+              anche su internet, in modo simile a quando mostra un documento allo sportello.
+            </p>
+            <p>
+              In pratica collega il cittadino ai servizi digitali, rendendo piu semplice accedere
+              a portali pubblici e istituzionali.
+            </p>
+          </div>
+          <div class="concept-card">
+            <div class="browser-frame">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="login-preview">
+              <div class="fingerprint" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M18 30c0-8 6-14 14-14s14 6 14 14"/>
+                  <path d="M14 38v-8c0-10 8-18 18-18s18 8 18 18v8"/>
+                  <path d="M24 50c-2-4-2-8-2-13v-7c0-6 4-10 10-10s10 4 10 10v5"/>
+                  <path d="M32 54c-3-5-4-9-4-17v-7c0-2 2-4 4-4s4 2 4 4v7c0 7 2 11 6 16"/>
+                  <path d="M42 45c-2-3-2-6-2-10"/>
+                </svg>
+              </div>
+              <h3>Identita verificata</h3>
+              <p>Il sistema controlla che l'accesso sia collegato a una persona reale.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="3" aria-label="Slide 3: A cosa serve">
+        <div class="slide-content">
+          <div class="section-heading">
+            <span class="kicker">A cosa serve</span>
+            <h2>Un solo accesso per molti servizi pubblici</h2>
+            <p>Con l'identita digitale il cittadino puo usare servizi online senza doversi recare ogni volta di persona negli uffici.</p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 21V8l8-5 8 5v13"/>
+                <path d="M9 21v-7h6v7M7 10h.01M17 10h.01"/>
+              </svg>
+              <h3>Pubblica Amministrazione</h3>
+              <p>Entrare nei portali ufficiali dello Stato, della Regione o del Comune.</p>
+            </article>
+            <article class="service-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
+                <path d="M14 3v6h6M9 13h6M9 17h4"/>
+              </svg>
+              <h3>Documenti</h3>
+              <p>Consultare certificati, pratiche e comunicazioni personali.</p>
+            </article>
+            <article class="service-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14M5 12h14"/>
+                <path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/>
+              </svg>
+              <h3>Sanita digitale</h3>
+              <p>Accedere a referti, ricette e servizi sanitari online.</p>
+            </article>
+            <article class="service-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16v10H4z"/>
+                <path d="M4 10h16M8 15h3"/>
+              </svg>
+              <h3>Pagamenti pubblici</h3>
+              <p>Pagare tasse, multe, ticket e altri servizi della PA.</p>
+            </article>
+            <article class="service-card wide-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4z"/>
+                <path d="m8 10 4-2 4 2-4 2-4-2ZM8 14h8"/>
+              </svg>
+              <h3>Scuola e istituzioni</h3>
+              <p>Accedere a portali scolastici, universitari o istituzionali in modo riconosciuto.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="4" aria-label="Slide 4: Esempi nella vita quotidiana">
+        <div class="slide-content two-column everyday-layout">
+          <div class="photo-panel">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1100&q=80" alt="Persona che usa uno smartphone per servizi online">
+            <div class="floating-tag">Servizi online</div>
+          </div>
+          <div class="text-panel">
+            <span class="kicker">Vita quotidiana</span>
+            <h2>Dove la usiamo davvero?</h2>
+            <ul class="timeline-list">
+              <li><strong>Fascicolo Sanitario Elettronico:</strong> per vedere referti, ricette e informazioni sanitarie.</li>
+              <li><strong>App IO:</strong> per ricevere messaggi e avvisi dai servizi pubblici.</li>
+              <li><strong>Pagamenti digitali:</strong> per pagare servizi verso la Pubblica Amministrazione.</li>
+              <li><strong>Prenotazioni online:</strong> per fissare appuntamenti senza code.</li>
+              <li><strong>Servizi comunali:</strong> per certificati, richieste e pratiche locali.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="5" aria-label="Slide 5: Sicurezza">
+        <div class="slide-bg media-bg soft" style="--photo:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80');"></div>
+        <div class="slide-content security-layout">
+          <div class="section-heading light">
+            <span class="kicker">Sicurezza</span>
+            <h2>Comoda, ma da usare con attenzione</h2>
+            <p>L'identita digitale funziona bene solo se proteggiamo i nostri dati personali.</p>
+          </div>
+
+          <div class="security-grid">
+            <article class="security-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 11V8a5 5 0 0 1 10 0v3"/>
+                <path d="M5 11h14v10H5z"/>
+              </svg>
+              <h3>Password sicure</h3>
+              <p>Lunghe, diverse tra loro e difficili da indovinare.</p>
+            </article>
+            <article class="security-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                <path d="M6 11h12v10H6zM12 15v2"/>
+              </svg>
+              <h3>PIN e autenticazione</h3>
+              <p>Codici personali e conferme servono a bloccare accessi non autorizzati.</p>
+            </article>
+            <article class="security-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"/>
+                <path d="M12 8v5M12 17h.01"/>
+              </svg>
+              <h3>Codici personali</h3>
+              <p>Non vanno condivisi con amici, siti sconosciuti o messaggi sospetti.</p>
+            </article>
+            <article class="security-item warning">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 2 21h20L12 3Z"/>
+                <path d="M12 9v5M12 17h.01"/>
+              </svg>
+              <h3>Phishing</h3>
+              <p>Attenzione a email false, link strani e pagine che imitano siti ufficiali.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide conclusion-slide" data-slide="6" aria-label="Slide 6: Conclusione">
+        <div class="slide-content conclusion-layout">
+          <div class="conclusion-mark" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="46"/>
+              <path d="M39 62 54 77l29-35"/>
+            </svg>
+          </div>
+          <span class="kicker">Conclusione</span>
+          <h2>Identita digitale significa servizi piu vicini al cittadino</h2>
+          <blockquote>
+            La carta d'identita digitale semplifica il rapporto tra cittadino e servizi pubblici,
+            rendendo molte operazioni piu veloci, accessibili e sicure. Tuttavia deve essere usata
+            con attenzione e responsabilita.
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <nav class="controls" aria-label="Controlli presentazione">
+      <button class="control-button" id="prevBtn" type="button" aria-label="Slide precedente">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Indietro</span>
+      </button>
+
+      <div class="dots" id="slideDots" aria-label="Seleziona slide"></div>
+
+      <button class="control-button primary" id="nextBtn" type="button" aria-label="Slide successiva">
+        <span>Avanti</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </button>
+    </nav>
+  </main>
+
+  <aside class="speaker-notes" hidden>
+    <h2>Discorso orale breve</h2>
+    <article>
+      <h3>Slide 1 - Titolo</h3>
+      <p>Oggi parlo della carta d'identita digitale, cioe di uno strumento che ci permette di identificarci online in modo semplice e sicuro. Il tema e importante perche sempre piu servizi pubblici si usano da computer o smartphone.</p>
+    </article>
+    <article>
+      <h3>Slide 2 - Che cos'e</h3>
+      <p>La carta d'identita digitale funziona come una versione digitale del documento d'identita. Serve a far capire a un sito o a un servizio online che siamo davvero noi, non un'altra persona.</p>
+    </article>
+    <article>
+      <h3>Slide 3 - A cosa serve</h3>
+      <p>Con l'identita digitale possiamo entrare nei servizi della Pubblica Amministrazione, consultare documenti, usare servizi sanitari, pagare servizi pubblici e accedere a portali scolastici o istituzionali.</p>
+    </article>
+    <article>
+      <h3>Slide 4 - Esempi quotidiani</h3>
+      <p>Nella vita quotidiana puo servire per il Fascicolo Sanitario Elettronico, per l'App IO, per pagare online, per prenotare appuntamenti o per richiedere servizi comunali senza andare fisicamente allo sportello.</p>
+    </article>
+    <article>
+      <h3>Slide 5 - Sicurezza</h3>
+      <p>Questi strumenti sono utili, ma bisogna usarli con attenzione. E importante scegliere password sicure, proteggere PIN e codici personali, non condividerli e fare attenzione a phishing, email false e siti non affidabili.</p>
+    </article>
+    <article>
+      <h3>Slide 6 - Conclusione</h3>
+      <p>In conclusione, la carta d'identita digitale rende il rapporto tra cittadini e servizi pubblici piu veloce, accessibile e sicuro. Pero, come tutti gli strumenti digitali, richiede responsabilita e attenzione.</p>
+    </article>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
